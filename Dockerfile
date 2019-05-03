@@ -3,6 +3,7 @@ FROM fluent/fluentd
 # Use root account to use apk
 USER root
 
+ENV TZ=America/Sao_Paulo
 # below RUN includes plugin as examples elasticsearch is not required
 # you may customize including plugins as you wish
 RUN apk add --no-cache --update --virtual .build-deps \
