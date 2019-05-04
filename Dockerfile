@@ -10,6 +10,7 @@ RUN apk add --no-cache --update --virtual .build-deps \
         sudo build-base ruby-dev  \
  && sudo gem install \
         fluent-plugin-elasticsearch \
+ && sudo gem install fluent-plugin-s3 -v 1.0.0 --no-document \
  && sudo gem sources --clear-all \
  && apk add tzdata \
  && apk del .build-deps \
